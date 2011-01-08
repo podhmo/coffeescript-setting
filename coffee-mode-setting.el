@@ -27,11 +27,12 @@
 
 (with-named-progn coffee-script-setting
   (add-to-list 'load-path (cur-dir))
+  (add-to-list 'load-path (concat (cur-dir) "coffee-mode/"))
   (require 'coffee-mode)
 
   (add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
   (add-to-list 'auto-mode-alist '("[Ca]kefile" . coffee-mode))
-
+  
     (defun coffee-selfish-setup ()
       (ansi-color-for-comint-mode-on)
 
